@@ -1,6 +1,6 @@
 let myLibrary = [];
 
-function book(Title,Author,Pages,Genre,Read){
+function book(Title,Author,Pages,Genre){
     this.Title = Title,
     this.Author = Author,
     this.Pages = Pages,
@@ -9,7 +9,7 @@ function book(Title,Author,Pages,Genre,Read){
         let descriptionDisplay = title + ' was written by ' +author + '. This book has ' + pages + ' pages and is in the genre of ' +genre+ '.';
         return descriptionDisplay;
     }*/
-    this.Read = Read;
+    //this.Read = Read;
 }
 let HarryPotter = new book('Harry Potter','JK',200,'fantasy', 'No')
 myLibrary.push(HarryPotter)
@@ -29,12 +29,35 @@ newBookBtn.addEventListener('click', function(){
 function myLibraryDisplay(array){
     for (let i = 0; i<array.length; i++){
         let newDiv = document.createElement('div');
+        let deleteButton = document.createElement('button')
+        let readButton = document.createElement('button')
+        readButton.classList.add('readButton');
+        deleteButton.classList.add('DeleteButton');
+        newDiv.classList.add('BookDiv');
         libraryDisplay.appendChild(newDiv);
+        newDiv.appendChild(deleteButton);
+        newDiv.appendChild(readButton);
+        deleteButton.textContent ='Delete';
+        readButton.textContent ='Read';
+        deleteButton.addEventListener('click',function(){
+            newDiv.remove();
+            array.splice(i,1);
+        })
         for (const prop in array[i]){
             let newDiv2 = document.createElement('div');
             newDiv.appendChild(newDiv2);
             newDiv2.textContent = prop +' : '+ array[i][prop];
         }
+        readButton.addEventListener('click',function(){
+            if (readButton.textContent === 'Read'){
+                readButton.textContent = "Not Read"
+            } else {
+                readButton.textContent = "Read"
+            }
+            //newDiv.remove();
+            //myLibraryDisplay(myLibrary);
+            
+        })
     }
 }
 
