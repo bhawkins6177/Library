@@ -6,14 +6,36 @@
     </head>
     <body> 
         <h1 id="titleContainer">
-            <div id="title">
+            <nav= id="title">
           Library
-            </div>
+            </nav>
         </h1>
-        <div id="btnContainer">
-          <button id="btn">Add new book</button>
+        <div id="subBody">
+        <div id ="formDiv">
+          <form id="form">
+            <div class="inputs">
+              <label for="titleInput" id="Lables">Title</label>
+              <input type="text" id="titleInput" class="inputField">  
+            </div>
+            <div class="inputs">
+              <label for="authorInput" id="Lables">Author</label>
+              <input type="text" id="authorInput"class="inputField">         
+            </div>
+            <div class="inputs">
+              <label for="pagesInput" id="Lables">Number of Pages</label>
+              <input type="text" id="pagesInput"class="inputField">          
+            </div>
+            <div class="inputs">
+              <label for="genreInput" id="Lables">Genre</label>
+              <input type="text" id="genreInput"class="inputField">
+            </div>
+          </form>
+          <div id="btnContainer">
+            <button id="btn">Add new book</button>
+          </div>
         </div>
         <div id="display"></div>
+      </div>
       </body>
         <script type="text/javascript" src="script.js"></script>
         <link rel="stylesheet" href="style.css">

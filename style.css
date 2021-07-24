@@ -1,13 +1,23 @@
+
 #title {
     display: flex;
+    font-size: 77px;
+    font-family: arial;
 }
 #titleContainer {
     display: flex;
-    justify-content: center;
+    background-color: #2196F3;
+    margin-bottom: auto;
+    height: 85px;
+    margin-top: -8px;
+    margin-left: -8px;
+    
 }
 #btnContainer{
     display: flex;
     justify-content: center;
+    
+  
 }
 #display{
     display: flex;
@@ -22,13 +32,50 @@
     margin-left: 20px;
     margin-right: 20px;
     border-style: double;
+    height: fit-content;
+    background-color: rgb(213, 239, 241);
 }
 
 .DeleteButton{
     width: 120px;
     height: 35px;
+    background-color: rgb(236, 236, 236);
 }
 .readButton{
     width: 120px;
     height: 35px;
+    background-color: rgb(236, 236, 236);
+}
+#subBody {
+display: flex;
+
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#formDiv{
+    margin-right: 20px;
+    width: 325px;
+    height: 436px;
+    background-color: rgb(218, 218, 218);
+    margin-left: -8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.inputField{
+    width: 211px;
+    height: 18px;
+}
+#Lables{
+    font-size: x-large;
+    font-family: sans-serif;
+}
+#btn {
+    height: 54px;
+    width: 145px;
+    font-size: 20px;
 }
